@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="contact-form">
+                    <h2>Contacto</h2>
+                    <form id="contactForm" action="confirmacion.html" target="_blank">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" value="Marcos" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="apellido">Apellido</label>
+                                <input type="text" class="form-control" id="apellido" value="Ortega" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="username">Nombre de usuario</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="username" value="marO" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="ciudad">Ciudad</label>
+                                <input type="text" class="form-control" id="ciudad" value="New York" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="motivo">Motivo</label>
+                                <select class="form-control" id="motivo" required>
+                                    <option value="Deposito">Deposito</option>
+                                    <option value="Giro">Giro</option>
+                                    <option value="Consulta de Saldo" selected>Consulta de Saldo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="verRespuesta">
+                                <label class="form-check-label" for="verRespuesta">Desea ver la respuesta en pantalla</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Solicitar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¿Seguro que deseas enviar?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="confirmSubmit">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
